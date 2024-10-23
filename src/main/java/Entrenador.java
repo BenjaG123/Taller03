@@ -3,6 +3,14 @@ public class Entrenador {
 	private String nombre;
 	private String experiencia;
 	private Deporte deporteEspecializado;
+	private Equipo equipoDirigido;
+
+	public Entrenador(String nombre, String experiencia, Deporte deporte) {
+		this.nombre = nombre;
+		this.experiencia = experiencia;
+		this.deporteEspecializado = deporte;
+		this.equipoDirigido = null;
+	}
 
 	public String getNombre() {
 		return this.nombre;

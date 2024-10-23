@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Equipo {
@@ -5,6 +6,12 @@ public class Equipo {
 	private String nombre;
 	private List<Deportista> deportistas;
 	private Entrenador entrenador;
+
+	public Equipo(String nombre) {
+		this.nombre = nombre;
+		this.deportistas = new ArrayList<Deportista>();
+		this.entrenador = null;
+	}
 
 	public String getNombre() {
 		return this.nombre;
@@ -30,4 +37,7 @@ public class Equipo {
 		this.entrenador = entrenador;
 	}
 
+	public void agregarDeportista(Deportista deportista) {
+		this.deportistas.add(deportista);
+	}
 }

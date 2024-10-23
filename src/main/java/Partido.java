@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Partido {
@@ -6,6 +7,13 @@ public class Partido {
 	private String resultado;
 	private String fecha;
 	private Cancha canchaAsignada;
+
+	public Partido(String resultado, String fecha, Cancha canchaAsignada) {
+		this.resultado = resultado;
+		this.fecha = fecha;
+		this.canchaAsignada = canchaAsignada;
+		this.equiposParticipantes = new ArrayList<Equipo>();
+	}
 
 	public List<Equipo> getEquiposParticipantes() {
 		return this.equiposParticipantes;
@@ -37,6 +45,14 @@ public class Partido {
 
 	public void setCanchaAsignada(Cancha canchaAsignada) {
 		this.canchaAsignada = canchaAsignada;
+	}
+
+	public void asignarEquipos(Equipo equipo) {
+		if (equiposParticipantes.size() > 0 && equiposParticipantes.size()<3) {
+			equiposParticipantes.add(equipo);
+		} else {
+			System.out.println("El partido ya tiene el maximo de equipos");
+		}
 	}
 
 }
