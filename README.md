@@ -17,3 +17,6 @@
 * Equipo - Entrenador (Composicion)
 * Club - Equipo (Composicion)
 * Partido - Cancha (Asociacion)
+* Partido - Equipo (Composicion)
+* Partido - Club (Asociacion)
+* Club - Cancha (Composicion)
